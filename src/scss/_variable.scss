@@ -1,82 +1,70 @@
-// ▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
-// variables
-// ▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲▼▲
-
-//カラー設定
-$blackColor: #000;
-$whiteColor: #fff;
-$grayColor: #3F312B;
-$accentColor: #661614;
-$subColor: #541818;
-$bgColor: #f9f3f2;
-$defaultFontColor: #221714;
+// カラー設定
+$blackColor: #212121;
+$grayColor: #757575;
+$defaultFontColor: #424242;
 $linkColor: #000;
 $transparent: rgba(0, 0, 0, 0);
 
-//フォント設定
-$h1FontSize: 2.2rem;
-$h2FontSize: 2rem;
-$h3FontSize: 1.8rem;
-$defaultFontSize: 1.6rem;
+// フォント設定
+$h1FontSize: 4rem;
+$h2FontSize: 3rem;
+$h3FontSize: 2.4rem;
+$xLargeFontSize: 2rem;
+$largeFontSize: 1.8rem;
+$mediumFontSize: 1.6rem;
 $smallFontSize: 1.4rem;
-$minimumFontSize: 1.2rem;
+$xSmallFontSize: 1.2rem;
 
-//border-radius
-$borderRadius: 3px;
+// line-height
+$xSmallLineHeight: 1;
+$smallLineHeight: 1.2;
+$mediumLineHeight: 1.6;
+$largeLineHeight: 1.8;
+$xLargeLineHeight: 2;
 
-//transition
-$transition_5s: .5s;
+// border-radius
+$borderRadius_5px: 5px;
+$borderRadius_10px: 10px;
 
-//opcity
+// transition
+$transition_c3s: .3s;
+$transition_c5s: .5s;
+$transition_1s: 1s;
+
+// opcity
 $opacity: .5;
 
-//米印インデント調整
+// easing
+$easing: cubic-bezier(0.39, 0.575, 0.565, 1);
+
+// 米印インデント調整
 @mixin indent {
   padding-left: 1em;
   text-indent: -1em;
 }
 
-//最大横幅設定
-@mixin width {
-  max-width: 1200px;
+// 最大横幅設定
+@mixin maxWidth {
+  max-width: 1000px;
   width: 100%;
   margin: 0 auto;
 }
 
-//横並び設定
+// 横並び設定
 @mixin flex {
   display: flex;
   flex-wrap: wrap;
   justify-content: flex-start;
 }
 
-//ブレイクポイント設定
+// ブレイクポイント設定
 $breakPoints: (
-  //モバイルファースト
-    'sp_middle': 'screen and (min-width: 768px)',
-    'sp_large': 'screen and (min-width: 1000px)',
-  //PCファースト
-    'pc_small': 'screen and (max-width: 320px)',
-    'pc_middle': 'screen and (max-width: 768px)'
+    'middle': 'screen and (min-width: 768px)',
+    'large': 'screen and (min-width: 1200px)',
 );
+
 @mixin mq($breakPoint) {
   @media #{map-get($breakPoints, $breakPoint)} {
     @content;
-  }
-}
-
-//スタイルデバッグ設定
-@mixin debug() {
-  body * {
-    outline: 1px dotted rgba(255, 0, 0, 0.2)!important;
-  }
-  body * * {
-    outline: 1px dotted rgba(0, 128, 0, 0.2)!important;
-  }
-  body * * * {
-    outline: 1px dotted rgba(255, 165, 0, 0.2)!important;
-  }
-  body * * * * {
-    outline: 1px dotted rgba(0, 0, 255, 0.2)!important;
   }
 }

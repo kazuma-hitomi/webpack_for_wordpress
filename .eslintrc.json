@@ -1,9 +1,7 @@
 {
   "env": {
-    "browser": true
-  },
-  "settings": {
-    "import/resolver": "webpack"
+    "browser": true,
+    "jquery": true
   },
   "extends": "airbnb-base",
   "parser": "babel-eslint"

@@ -1,26 +1,33 @@
+@include mq(large) {
+  ::-webkit-scrollbar {
+    width: 10px;
+    &-track {
+      background: white;
+    }
+    &-thumb {
+      background: $defaultFontColor;
+    }
+  }
+}
+
 *::selection {
-  color: $whiteColor;
-  background: $accentColor;
+  color: white;
+  background: $blackColor;
 }
 
 html {
-  overflow-x: hidden;
   overflow-y: scroll;
-  line-height: 1.8;
+  line-height: $largeLineHeight;
   font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Helvetica, Arial, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
   font-size: 62.5%;
   letter-spacing: 0.0625em;
 }
 
 body {
+  overflow-x: hidden;
   font-size: 1rem;
   font-weight: normal;
   color: $defaultFontColor;
-}
-
-h1, h2, h3, h4, p, li, dd, dt, th, td, a {
-  word-wrap: break-word;
-  font-size: $defaultFontSize;
 }
 
 h1 {
@@ -33,6 +40,16 @@ h2 {
   font-weight: normal;
 }
 
+h3 {
+  font-size: $h3FontSize;
+  font-weight: normal;
+}
+
+p, li, dd, dt, th, td, a, button {
+  box-sizing: border-box;
+  font-size: $mediumFontSize;
+}
+
 li {
   list-style: none;
 }
@@ -41,7 +58,8 @@ a {
   box-sizing: border-box;
   display: inline-block;
   text-decoration: none;
-  transition: $transition_5s;
+  color: $defaultFontColor;
+  transition: $transition_c5s;
 }
 
 img {
@@ -52,25 +70,32 @@ img {
 
 button {
   outline: none;
+  box-sizing: border-box;
   display: block;
   border-radius: 0;
+  cursor: pointer;
 }
 
 input {
+  box-sizing: border-box;
+  display: block;
   outline: 0;
-  letter-spacing: .0625em;
 }
 
 textarea {
+  box-sizing: border-box;
+  display: block;
   outline: 0;
 }
 
 select {
   outline: 0;
+  box-sizing: border-box;
   border-radius: 0;
 }
 
 hr {
+  box-sizing: border-box;
   height: 0;
   margin: 0;
   padding: 0;
@@ -82,6 +107,13 @@ table {
   border-spacing: 0;
 }
 
+svg {
+  display: block;
+  &:not(:root) {
+    overflow: visible;
+  }
+}
+
 .disNone {
   display: none!important;
 }
@@ -89,15 +121,27 @@ table {
   display: block!important;
 }
 .spDisBlock {
-  display: none!important;
-  @media screen and (max-width: 480px) {
-    display: block!important;
+  display: block!important;
+  @include mq(large) {
+    display: none!important;
   }
 }
 .pcDisBlock {
-  display: block!important;
-  @media screen and (max-width: 480px) {
+  display: none!important;
+  @include mq(large) {
+    display: block!important;
+  }
+}
+.spDisFlex {
+  display: flex!important;
+  @include mq(large) {
     display: none!important;
+  }
+}
+.pcDisFlex {
+  display: none!important;
+  @include mq(large) {
+    display: flex!important;
   }
 }
 
@@ -115,10 +159,9 @@ table {
   font-weight: bold!important;
 }
 
-.link {
-  text-decoration: underline;
+.mR10 {
+  margin-right: 10px;
 }
-
-svg:not(:root) {
-  overflow: visible;
+.mB10 {
+  margin-bottom: 10px;
 }
