@@ -1,37 +1,46 @@
 {
   "name": "webpack_for_wordpress",
+  "private": true,
   "version": "1.0.0",
-  "description": "",
-  "main": "index.js",
-  "scripts": {
-    "build": "webpack-dev-server --open --mode production",
-    "dev": "webpack-dev-server --open --mode development"
-  },
-  "keywords": [],
+  "description": "webpack_for_wordpress",
   "author": "",
-  "license": "ISC",
+  "keywords": [
+    "website"
+  ],
+  "license": "MIT",
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/kazuma-hitomi/webpack_for_wordpress"
+  },
+  "main": "main.js",
   "devDependencies": {
     "@babel/core": "^7.3.3",
     "@babel/preset-env": "^7.3.1",
     "autoprefixer": "^9.4.8",
     "babel-eslint": "^10.0.1",
     "babel-loader": "^8.0.5",
+    "browser-sync": "^2.26.5",
+    "browser-sync-webpack-plugin": "^2.2.2",
     "css-loader": "^2.1.0",
     "eslint": "^5.14.1",
     "eslint-config-airbnb-base": "^13.1.0",
     "eslint-loader": "^2.1.2",
     "eslint-plugin-import": "^2.16.0",
+    "file-loader": "^3.0.1",
     "mini-css-extract-plugin": "^0.5.0",
     "node-sass": "^4.11.0",
     "optimize-css-assets-webpack-plugin": "^5.0.1",
     "postcss-loader": "^3.0.0",
     "sass-loader": "^7.1.0",
     "webpack": "^4.29.5",
-    "webpack-cli": "^3.2.3",
-    "webpack-dev-server": "^3.2.0"
+    "webpack-cli": "^3.2.3"
   },
   "dependencies": {
     "@babel/polyfill": "^7.2.5",
     "ress": "^1.2.2"
+  },
+  "scripts": {
+    "build": "webpack --mode production",
+    "dev": "webpack -w --mode development"
   }
 }

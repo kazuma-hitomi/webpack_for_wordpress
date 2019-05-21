@@ -2,14 +2,19 @@ const path = require('path');
 const autoprefixer = require('autoprefixer');
 const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const OptimizeCSSAssetsPlugin = require('optimize-css-assets-webpack-plugin');
+const BrowserSyncPlugin = require('browser-sync-webpack-plugin');
 
 const outputPath = path.resolve(__dirname, './');
 
 module.exports = {
-  entry: './src/js/index.js',
+  devtool: 'eval-source-map',
+  externals: {
+    jquery: 'jQuery',
+  },
+  entry: './src/js/main.js',
   output: {
-    filename: 'main.js',
     path: outputPath,
+    filename: '[name].js',
   },
   module: {
     rules: [
@@ -23,11 +28,6 @@ module.exports = {
         test: /\.js$/,
         exclude: /node_modules/,
         loader: 'babel-loader',
-        options: {
-          presets: [
-            '@babel/preset-env',
-          ],
-        },
       },
       {
         test: /\.scss$/,
@@ -55,13 +55,30 @@ module.exports = {
           },
         ],
       },
+      {
+        test: /\.(jpg|png|gif|svg)$/,
+        use: [
+          {
+            loader: 'file-loader',
+            options: {
+              path: outputPath,
+              name: './assets/images/[name].[ext]',
+            },
+          },
+        ],
+      },
     ],
   },
-  devServer: {
-    contentBase: outputPath,
-    watchContentBase: true,
-  },
   plugins: [
+    new BrowserSyncPlugin({
+      host: 'localhost',
+      port: 3000,
+      // proxy: 'http://localhost:8080/***/',
+      files: [
+        './*.php',
+        './**/*.php',
+      ],
+    }),
     new MiniCssExtractPlugin({
       filename: 'style.css',
     }),
@@ -71,5 +88,4 @@ module.exports = {
       new OptimizeCSSAssetsPlugin({}),
     ],
   },
-  devtool: 'eval-source-map',
 };
