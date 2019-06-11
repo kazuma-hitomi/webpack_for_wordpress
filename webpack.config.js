@@ -11,7 +11,10 @@ module.exports = {
   externals: {
     jquery: 'jQuery',
   },
-  entry: './src/js/main.js',
+  entry: {
+    main: './src/js/main.js',
+    top: './src/js/top.js',
+  },
   output: {
     path: outputPath,
     filename: '[name].js',
