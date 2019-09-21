@@ -6,9 +6,9 @@ $linkColor: #000;
 $transparent: rgba(0, 0, 0, 0);
 
 // フォント設定
-$h1FontSize: 4rem;
-$h2FontSize: 3rem;
-$h3FontSize: 2.4rem;
+$h1FontSize: 2.6rem;
+$h2FontSize: 2.4rem;
+$h3FontSize: 2.2rem;
 $xLargeFontSize: 2rem;
 $largeFontSize: 1.8rem;
 $mediumFontSize: 1.6rem;
@@ -16,20 +16,20 @@ $smallFontSize: 1.4rem;
 $xSmallFontSize: 1.2rem;
 
 // line-height
-$xSmallLineHeight: 1;
-$smallLineHeight: 1.2;
+$clearLineHeight: 1;
+$xSmallLineHeight: 1.2;
+$smallLineHeight: 1.4;
 $mediumLineHeight: 1.6;
 $largeLineHeight: 1.8;
-$xLargeLineHeight: 2;
 
 // border-radius
 $borderRadius_5px: 5px;
 $borderRadius_10px: 10px;
 
 // transition
-$transition_c3s: .3s;
-$transition_c5s: .5s;
-$transition_1s: 1s;
+$transition_c3s: .3s cubic-bezier(1.000, 0.000, 0.000, 1.000);
+$transition_c5s: .5s cubic-bezier(1.000, 0.000, 0.000, 1.000);
+$transition_1s: 1s cubic-bezier(1.000, 0.000, 0.000, 1.000);
 
 // opcity
 $opacity: .5;
@@ -57,7 +57,7 @@ $easing: cubic-bezier(0.39, 0.575, 0.565, 1);
   justify-content: flex-start;
 }
 
-// ブレイクポイント設定
+// ブレイクポイント設定 モバイルファースト
 $breakPoints: (
     'middle': 'screen and (min-width: 768px)',
     'large': 'screen and (min-width: 1200px)',
