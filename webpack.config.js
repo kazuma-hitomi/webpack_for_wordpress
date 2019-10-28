@@ -83,7 +83,7 @@ module.exports = {
       ],
     }),
     new MiniCssExtractPlugin({
-      filename: 'style.css',
+      filename: './assets/css/[name].css',
     }),
   ],
   optimization: {

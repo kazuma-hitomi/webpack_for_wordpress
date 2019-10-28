@@ -60,13 +60,15 @@ function latest_version($file) {
 function loading_scripts() {
   if(!is_admin()) {
     // 管理画面以外で読み込み
+    wp_enqueue_style('style', get_stylesheet_uri(), array(), latest_version('style.css'), 'all');
     wp_deregister_script('jquery');
     wp_enqueue_script('jquery', 'https://code.jquery.com/jquery-3.3.1.min.js', array(), false, true);
-    wp_enqueue_script('main', get_template_directory_uri() . '/assets/js/main.js', array(), latest_version('main.js'), true);
+    wp_enqueue_script('main_script', get_template_directory_uri() . '/assets/js/main.js', array(), latest_version('main.js'), true);
+    wp_enqueue_style('main_style', get_template_directory_uri() . '/assets/css/main.css', array(), latest_version('main.css'), 'all');
     if(is_front_page() && is_home()) {
-      wp_enqueue_script('top', get_template_directory_uri() . '/assets/js/top.js', array(), latest_version('top.js'), true);
+      wp_enqueue_script('top_script', get_template_directory_uri() . '/assets/js/top.js', array(), latest_version('top.js'), true);
+      wp_enqueue_style('top_style', get_template_directory_uri() . '/assets/css/top.css', array(), latest_version('top.css'), 'all');
     }
-    wp_enqueue_style('style', get_stylesheet_uri(), array(), latest_version('style.css'), 'all');
   }
 }
 add_action('wp_enqueue_scripts', 'loading_scripts');
