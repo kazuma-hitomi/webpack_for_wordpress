@@ -2,13 +2,14 @@
 $blackColor: #212121;
 $grayColor: #757575;
 $defaultFontColor: #424242;
-$linkColor: #000;
+$keyColor: #4B3BA3;
 $transparent: rgba(0, 0, 0, 0);
 
 // フォント設定
-$h1FontSize: 2.6rem;
-$h2FontSize: 2.4rem;
-$h3FontSize: 2.2rem;
+$h1FontSize: 2.8rem;
+$h2FontSize: 2.6rem;
+$h3FontSize: 2.4rem;
+$h4FontSize: 2.2rem;
 $xLargeFontSize: 2rem;
 $largeFontSize: 1.8rem;
 $mediumFontSize: 1.6rem;
@@ -27,15 +28,15 @@ $borderRadius_5px: 5px;
 $borderRadius_10px: 10px;
 
 // transition
-$transition_c3s: .3s cubic-bezier(1.000, 0.000, 0.000, 1.000);
-$transition_c5s: .5s cubic-bezier(1.000, 0.000, 0.000, 1.000);
-$transition_1s: 1s cubic-bezier(1.000, 0.000, 0.000, 1.000);
+$transition_c3s: .3s;
+$transition_c5s: .5s;
+$transition_1s: 1s;
 
 // opcity
 $opacity: .5;
 
 // easing
-$easing: cubic-bezier(0.39, 0.575, 0.565, 1);
+$easing: cubic-bezier(1, 0, 0, 1);
 
 // 米印インデント調整
 @mixin indent {
@@ -59,8 +60,8 @@ $easing: cubic-bezier(0.39, 0.575, 0.565, 1);
 
 // ブレイクポイント設定 モバイルファースト
 $breakPoints: (
-    'middle': 'screen and (min-width: 768px)',
-    'large': 'screen and (min-width: 1200px)',
+  'middle': 'screen and (min-width: 768px)',
+  'large': 'screen and (min-width: 1000px)',
 );
 
 @mixin mq($breakPoint) {

@@ -1,6 +1,6 @@
 *::selection {
   color: white;
-  background: $blackColor;
+  background: $keyColor;
 }
 
 html {
@@ -20,11 +20,16 @@ body {
 
 header, footer, main, nav,
 section, article, aside,
-h1, h2, h3,
+h1, h2, h3, h4,
 figure, figcaption, table,
-p, ul, li, dl, dd, dt, th, td, a, button,
-input, textarea, select {
+p, ul, li, dl, dd, dt, th, td, button,
+a, input, textarea, select,
+hr {
   box-sizing: border-box;
+}
+
+h1, h2, h3, h4 {
+  line-height: $smallLineHeight;
 }
 
 h1 {
@@ -42,8 +47,13 @@ h3 {
   font-weight: normal;
 }
 
-p, li, dd, dt, th, td, a, button,
-input, textarea, select {
+h4 {
+  font-size: $h4FontSize;
+  font-weight: normal;
+}
+
+p, li, dd, dt, th, td, button, figcaption,
+a, input, textarea, select {
   font-size: $mediumFontSize;
 }
 
@@ -52,10 +62,10 @@ li {
 }
 
 a {
-  display: inline-block;
+  display: block;
   text-decoration: none;
-  color: $defaultFontColor;
-  transition: $transition_c5s;
+  color: $keyColor;
+  transition: $transition_c3s;
 }
 
 img {
@@ -87,7 +97,6 @@ select {
 }
 
 hr {
-  box-sizing: border-box;
   height: 0;
   margin: 0;
   padding: 0;
@@ -158,7 +167,7 @@ svg {
       background: white;
     }
     &-thumb {
-      background: $defaultFontColor;
+      background: $keyColor;
     }
   }
 }
