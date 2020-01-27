@@ -1,9 +1,7 @@
-*::selection {
-  color: white;
-  background: $keyColor;
-}
+@import "variable";
 
 html {
+  overflow-x: hidden;
   overflow-y: scroll;
   line-height: $mediumLineHeight;
   font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Helvetica, Arial, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
@@ -29,27 +27,13 @@ hr {
 }
 
 h1, h2, h3, h4 {
+  line-height: $clearLineHeight;
+  font-size: 1rem;
+  font-weight: normal;
+}
+
+h3, h4 {
   line-height: $smallLineHeight;
-}
-
-h1 {
-  font-size: $h1FontSize;
-  font-weight: normal;
-}
-
-h2 {
-  font-size: $h2FontSize;
-  font-weight: normal;
-}
-
-h3 {
-  font-size: $h3FontSize;
-  font-weight: normal;
-}
-
-h4 {
-  font-size: $h4FontSize;
-  font-weight: normal;
 }
 
 p, li, dd, dt, th, td, button, figcaption,
@@ -64,8 +48,8 @@ li {
 a {
   display: block;
   text-decoration: none;
-  color: $keyColor;
-  transition: $transition_c3s;
+  color: $defaultFontColor;
+  transition: $defaultTransition;
 }
 
 img {
@@ -123,25 +107,25 @@ svg {
 }
 .spDisBlock {
   display: block!important;
-  @include mq(large) {
+  @include mq(tabletVertical) {
     display: none!important;
   }
 }
 .pcDisBlock {
   display: none!important;
-  @include mq(large) {
+  @include mq(pc) {
     display: block!important;
   }
 }
 .spDisFlex {
   display: flex!important;
-  @include mq(large) {
+  @include mq(tabletVertical) {
     display: none!important;
   }
 }
 .pcDisFlex {
   display: none!important;
-  @include mq(large) {
+  @include mq(pc) {
     display: flex!important;
   }
 }
@@ -158,16 +142,4 @@ svg {
 
 .fontWB {
   font-weight: bold!important;
-}
-
-@include mq(large) {
-  ::-webkit-scrollbar {
-    width: 10px;
-    &-track {
-      background: white;
-    }
-    &-thumb {
-      background: $keyColor;
-    }
-  }
 }

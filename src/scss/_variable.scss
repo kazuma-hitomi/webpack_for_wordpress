@@ -1,12 +1,11 @@
 // カラー設定
-$blackColor: #212121;
-$grayColor: #757575;
-$defaultFontColor: #424242;
-$keyColor: #4B3BA3;
+$defaultFontColor: #000;
+$keyColor: #ffff28;
+$subColor: #000;
 $transparent: rgba(0, 0, 0, 0);
 
 // フォント設定
-$h1FontSize: 2.8rem;
+$h1FontSize: 3rem;
 $h2FontSize: 2.6rem;
 $h3FontSize: 2.4rem;
 $h4FontSize: 2.2rem;
@@ -18,25 +17,24 @@ $xSmallFontSize: 1.2rem;
 
 // line-height
 $clearLineHeight: 1;
-$xSmallLineHeight: 1.2;
-$smallLineHeight: 1.4;
-$mediumLineHeight: 1.6;
-$largeLineHeight: 1.8;
+$smallLineHeight: 1.2;
+$mediumLineHeight: 1.4;
+$largeLineHeight: 1.6;
 
 // border-radius
 $borderRadius_5px: 5px;
 $borderRadius_10px: 10px;
 
 // transition
-$transition_c3s: .3s;
-$transition_c5s: .5s;
-$transition_1s: 1s;
+$defaultTransition: .3s;
+$littleSlowTransition: 1s;
+$slowTransition: 1.5s;
 
 // opcity
-$opacity: .5;
+$halfOpacity: .5;
 
 // easing
-$easing: cubic-bezier(1, 0, 0, 1);
+$easing: cubic-bezier(0.19, 1, 0.22, 1);
 
 // 米印インデント調整
 @mixin indent {
@@ -45,8 +43,13 @@ $easing: cubic-bezier(1, 0, 0, 1);
 }
 
 // 最大横幅設定
-@mixin maxWidth {
-  max-width: 1000px;
+@mixin tabletMaxWidth {
+  max-width: 900px;
+  width: 100%;
+  margin: 0 auto;
+}
+@mixin pcMaxWidth {
+  max-width: 1200px;
   width: 100%;
   margin: 0 auto;
 }
@@ -54,14 +57,16 @@ $easing: cubic-bezier(1, 0, 0, 1);
 // 横並び設定
 @mixin flex {
   display: flex;
-  flex-wrap: wrap;
+  flex-wrap: nowrap;
   justify-content: flex-start;
 }
 
-// ブレイクポイント設定 モバイルファースト
+// ブレイクポイント設定
 $breakPoints: (
-  'middle': 'screen and (min-width: 768px)',
-  'large': 'screen and (min-width: 1000px)',
+  'spHorizontal': 'screen and (min-width: 560px)',
+  'tabletVertical': 'screen and (min-width: 768px)',
+  'tabletHorizontal': 'screen and (min-width: 960px)',
+  'pc': 'screen and (min-width: 1025px)',
 );
 
 @mixin mq($breakPoint) {
