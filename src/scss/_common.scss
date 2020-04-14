@@ -4,7 +4,7 @@ html {
   overflow-x: hidden;
   overflow-y: scroll;
   line-height: $mediumLineHeight;
-  font-family: "游ゴシック", YuGothic, "ヒラギノ角ゴ Pro W3", "Hiragino Kaku Gothic Pro", "メイリオ", Helvetica, Arial, "ＭＳ Ｐゴシック", "MS PGothic", sans-serif;
+  font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   font-size: 62.5%;
   letter-spacing: 0.0625em;
 }
@@ -32,12 +32,26 @@ h1, h2, h3, h4 {
   font-weight: normal;
 }
 
+h1 {
+  font-size: $h1FontSize;
+}
+h2 {
+  font-size: $h2FontSize;
+}
+h3 {
+  font-size: $h3FontSize;
+}
+h4 {
+  font-size: $h4FontSize;
+}
+
 h3, h4 {
   line-height: $smallLineHeight;
 }
 
 p, li, dd, dt, th, td, button, figcaption,
 a, input, textarea, select {
+  line-height: $mediumLineHeight;
   font-size: $mediumFontSize;
 }
 
@@ -104,30 +118,6 @@ svg {
 }
 .disBlock {
   display: block!important;
-}
-.spDisBlock {
-  display: block!important;
-  @include mq(tabletVertical) {
-    display: none!important;
-  }
-}
-.pcDisBlock {
-  display: none!important;
-  @include mq(pc) {
-    display: block!important;
-  }
-}
-.spDisFlex {
-  display: flex!important;
-  @include mq(tabletVertical) {
-    display: none!important;
-  }
-}
-.pcDisFlex {
-  display: none!important;
-  @include mq(pc) {
-    display: flex!important;
-  }
 }
 
 .textAL {

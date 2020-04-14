@@ -45,13 +45,6 @@ module.exports = {
               plugins: [
                 autoprefixer({
                   grid: true,
-                  browsers: [
-                    '> 1%',
-                    'last 2 versions',
-                    'ie >= 11',
-                    'Android >= 4',
-                    'iOS >= 10',
-                  ],
                 }),
               ],
             },

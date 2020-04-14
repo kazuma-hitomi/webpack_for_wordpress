@@ -1,5 +1,5 @@
 // カラー設定
-$defaultFontColor: #000;
+$defaultFontColor: #111;
 $keyColor: #ffff28;
 $subColor: #000;
 $transparent: rgba(0, 0, 0, 0);
@@ -31,7 +31,7 @@ $littleSlowTransition: 1s;
 $slowTransition: 1.5s;
 
 // opcity
-$halfOpacity: .5;
+$defaultOpacity: .5;
 
 // easing
 $easing: cubic-bezier(0.19, 1, 0.22, 1);
