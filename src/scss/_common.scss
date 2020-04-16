@@ -76,21 +76,24 @@ button {
   outline: none;
   display: block;
   border-radius: 0;
+  background: none;
+  border: none;
   cursor: pointer;
 }
 
 input {
-  outline: 0;
+  outline: none;
   display: block;
+  border: none;
 }
 
 textarea {
-  outline: 0;
+  outline: none;
   display: block;
 }
 
 select {
-  outline: 0;
+  outline: none;
   border-radius: 0;
 }
 
