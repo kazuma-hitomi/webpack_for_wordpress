@@ -37,7 +37,6 @@ module.exports = {
         use: [
           MiniCssExtractPlugin.loader,
           'css-loader',
-          'sass-loader',
           {
             loader: 'postcss-loader',
             options: {
@@ -49,6 +48,7 @@ module.exports = {
               ],
             },
           },
+          'sass-loader',
         ],
       },
       {
@@ -57,8 +57,9 @@ module.exports = {
           {
             loader: 'file-loader',
             options: {
-              path: outputPath,
-              name: './assets/images/[name].[ext]',
+              name: '[name].[ext]',
+              outputPath: 'assets/images/',
+              publicPath: outputPath => `../../assets/images/${outputPath}`, // eslint-disable-line
             },
           },
         ],

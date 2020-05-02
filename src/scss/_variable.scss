@@ -1,25 +1,25 @@
 // カラー設定
-$defaultFontColor: #111;
-$keyColor: #ffff28;
-$subColor: #000;
-$transparent: rgba(0, 0, 0, 0);
+$defaultFontColor: #1A1A1A;
+$keyColor: #B8B9B2;
+$grayColor: #E5E6DF;
 
 // フォント設定
-$h1FontSize: 3rem;
-$h2FontSize: 2.6rem;
-$h3FontSize: 2.4rem;
-$h4FontSize: 2.2rem;
 $xLargeFontSize: 2rem;
 $largeFontSize: 1.8rem;
 $mediumFontSize: 1.6rem;
 $smallFontSize: 1.4rem;
 $xSmallFontSize: 1.2rem;
+$minimumFontSize: 1rem;
+
+// letter-spacing
+$wideLetterSpacing: .15em;
 
 // line-height
 $clearLineHeight: 1;
-$smallLineHeight: 1.2;
-$mediumLineHeight: 1.4;
-$largeLineHeight: 1.6;
+$smallLineHeight: 1.4;
+$mediumLineHeight: 1.6;
+$largeLineHeight: 1.8;
+$xLargeLineHeight: 2;
 
 // border-radius
 $borderRadius_5px: 5px;

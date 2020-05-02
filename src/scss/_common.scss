@@ -3,15 +3,14 @@
 html {
   overflow-x: hidden;
   overflow-y: scroll;
-  line-height: $mediumLineHeight;
   font-family: "Helvetica Neue", Arial, "Hiragino Kaku Gothic ProN", "Hiragino Sans", Meiryo, sans-serif;
   font-size: 62.5%;
   letter-spacing: 0.0625em;
+  font-feature-settings:'palt' 1;
 }
 
 body {
-  overflow-x: hidden;
-  font-size: 1rem;
+  font-size: $minimumFontSize;
   font-weight: normal;
   color: $defaultFontColor;
 }
@@ -26,27 +25,10 @@ hr {
   box-sizing: border-box;
 }
 
-h1, h2, h3, h4 {
+h1, h2 {
   line-height: $clearLineHeight;
-  font-size: 1rem;
+  font-size: $minimumFontSize;
   font-weight: normal;
-}
-
-h1 {
-  font-size: $h1FontSize;
-}
-h2 {
-  font-size: $h2FontSize;
-}
-h3 {
-  font-size: $h3FontSize;
-}
-h4 {
-  font-size: $h4FontSize;
-}
-
-h3, h4 {
-  line-height: $smallLineHeight;
 }
 
 p, li, dd, dt, th, td, button, figcaption,
@@ -85,6 +67,7 @@ button {
 input {
   outline: none;
   display: block;
+  line-height: $clearLineHeight;
   border: none;
 }
 
@@ -134,18 +117,4 @@ svg {
   @include mq(tabletHorizontal) {
     display: block;
   }
-}
-
-.textAL {
-  text-align: left!important;
-}
-.textAC {
-  text-align: center!important;
-}
-.textAR {
-  text-align: right!important;
-}
-
-.fontWB {
-  font-weight: bold!important;
 }
