@@ -1,3 +1,3 @@
-import '../scss/top.scss';
+import '../scss/top.scss'
 
-console.log('this is top page.');
+console.log('this is top page.')
