@@ -15,7 +15,7 @@
   "main": "main.js",
   "scripts": {
     "build": "webpack --config webpack.production.js",
-    "dev": "webpack-dev-server --open --config webpack.development.js"
+    "dev": "webpack --watch --config webpack.development.js"
   },
   "devDependencies": {
     "@babel/core": "^7.9.0",
