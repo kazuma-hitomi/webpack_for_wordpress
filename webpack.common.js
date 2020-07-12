@@ -48,16 +48,14 @@ module.exports = {
       },
       {
         test: /\.(jpg|png|gif|svg)$/,
-        use: [
-          {
-            loader: 'file-loader',
-            options: {
-              name: '[name].[ext]',
-              outputPath: 'assets/images/',
-              publicPath: outputPath => `../../assets/images/${outputPath}`, // eslint-disable-line
-            },
+        use: {
+          loader: 'file-loader',
+          options: {
+            name: '[name].[ext]',
+            outputPath: './assets/images/',
+            publicPath: (outputPath) => `../../assets/images/${outputPath}`,
           },
-        ],
+        },
       },
     ],
   },
