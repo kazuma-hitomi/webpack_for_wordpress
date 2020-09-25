@@ -108,7 +108,7 @@ function add_ogp() {
   $title = 'title';
   $type = 'website';
   $url = home_url('/');
-  $img = content_url() . '/themes/feel/assets/images/ogp.jpg';
+  $img = content_url() . '/themes/???????????????????????????????/assets/images/ogp.jpg';
   $desc = get_bloginfo('description');
   $twitter_card = 'summary_large_image';
   $twitter_site = '';
