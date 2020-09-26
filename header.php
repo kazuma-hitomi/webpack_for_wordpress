@@ -1,4 +1,3 @@
-<?php global $global_var; ?>
 <!DOCTYPE html>
 <html lang="ja">
 <head>
