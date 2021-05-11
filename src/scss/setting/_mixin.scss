@@ -4,18 +4,6 @@
   text-indent: -1em;
 }
 
-// 最大横幅設定
-@mixin tabletMaxWidth {
-  max-width: 900px;
-  width: 100%;
-  margin: 0 auto;
-}
-@mixin pcMaxWidth {
-  max-width: 1200px;
-  width: 100%;
-  margin: 0 auto;
-}
-
 // 横並び設定
 @mixin flex {
   display: flex;
@@ -28,7 +16,7 @@ $breakPoints: (
   'spHorizontal': 'screen and (min-width: 560px)',
   'tabletVertical': 'screen and (min-width: 768px)',
   'tabletHorizontal': 'screen and (min-width: 960px)',
-  'pc': 'screen and (min-width: 1025px)',
+  'pc': 'screen and (min-width: 1024px)',
 );
 
 @mixin mq($breakPoint) {

@@ -112,22 +112,3 @@ svg {
     overflow: visible;
   }
 }
-
-.disNone {
-  display: none!important;
-}
-.disBlock {
-  display: block!important;
-}
-.longDisBlock {
-  display: block;
-  @include mq(tabletHorizontal) {
-    display: none;
-  }
-}
-.wideDisBlock {
-  display: none;
-  @include mq(tabletHorizontal) {
-    display: block;
-  }
-}
